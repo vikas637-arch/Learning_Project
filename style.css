@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f6fb;
+    color: #010058;
+}
+
+nav {
+    background-color: rgba(132, 3, 201, 0.94);
+    padding: 12px 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(23, 37, 84, 0.18);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 8px;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #ff9500;
+}
+
+#home {
+    min-height: 500px;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+#home h1 {
+    font-size: 55px;
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 21px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.start-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background-color: #084fe7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.start-button:hover {
+    background-color: #172554;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #172554;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #cccccc;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #084fe7;
+    font-weight: bold;
+}
+
+.card h3 {
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.form-box {
+    background-color: white;
+    width: 450px;
+    max-width: 95%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #cccccc;
+    text-align: left;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus {
+    outline: 3px solid rgba(8, 79, 231, 0.15);
+    border-color: #084fe7;
+}
+
+.form-box textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #084fe7;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #172554;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+.contact-box p {
+    font-size: 18px;
+    margin: 15px;
+}
+
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    nav a {
+        display: block;
+        margin: 5px;
+    }
+
+    #home {
+        min-height: 430px;
+        padding: 75px 20px;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+}
